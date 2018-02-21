@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#colorCh").on("change",function(){
+            $("#choosen-color").text($(this).val());
+        });
+    </script>
+</head>
+<body>
+    <!--
+    <input type="color" id="colorP" />
+    <span id="span1"></span><br> -->
+
+    <input type="color" id="colorCh">
+    <div id="choosen-color"></div>
+
+    <!--<script type="text/javascript">
+        var colorWell;
+        var defaultColor = "#0000ff";        
+        
+        window.addEventListener("load", startup, false);
+
+        function startup(){
+            colorWell = document.querySelector("#colorP");
+            colorWell.value = defaultColor;
+            colorWell.select();
+            $("#span1").text(colorWell.value);
+            return colorWell.value;
+        }*/
+
+        $("#color").on("change",function(){
+            $("#choosen-color").text($(this).val());
+        });
+    </script> -->
+</body>
+</html>

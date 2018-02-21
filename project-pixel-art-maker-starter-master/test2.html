@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title></title>
+	<style type="text/css">
+		table{
+			border-collapse: collapse; 
+			/*border-spacing: 0px; 
+			table-layout:fixed;*/
+			margin: 0 auto;
+		}
+
+		table td{
+			width: 50px; 
+			height: 50px; 
+			border: 1px solid black;
+			padding: 0px;
+		}
+
+		#first{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<ul id="xyz">
+  <li>list <strong>item 1</strong></li>
+  <li><span>list item 2</span></li>
+  <li>list item 3</li>
+</ul>
+
+<ul>
+	<li>uno</li>
+	<li>dos</li>
+	<li>tres</li>
+</ul>
+
+<table>
+		<tr>
+			<td id="first"></td>
+			<td class="abc"></td>
+			<td class="abc"></td>
+			<td class="abc"></td>
+		</tr>
+		<tr>
+			<td class="abc"></td>
+			<td class="abc"></td>
+			<td class="abc"></td>
+			<td class="abc"></td>
+		</tr>
+		<tr>
+			<td class="abc"></td>
+			<td class="abc"></td>
+			<td class="abc"></td>
+			<td class="abc"></td>
+		</tr>
+
+	</table>
+
+<table id="pixel_canvas" style="border-collapse: collapse; margin: 0px auto;"><tr class="pixelTable"><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td></tr><tr class="pixelTable"><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td></tr><tr class="pixelTable"><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td><td class="pixelTable" style="border: 1px solid black; width: 10px; height: 10px; padding: 0px; background-color: rgb(255, 255, 153);"></td></tr></table>
+
+<script type="text/javascript">
+//$( "ul" ).click(function( event ) {
+$('#xyz').on('click', 'ul', function (event) {
+  var target = $( event.target );
+  //if (target.id("xyz")) {
+  if ( target.is( "li" ) ) {
+    target.css( "background-color", "red" );
+  }
+});
+
+$(".pixelTable").click(function(event){
+	alert("bla");
+});
+
+</script>
+
+</body>
+</html>
